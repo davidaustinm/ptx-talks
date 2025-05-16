@@ -1,0 +1,10 @@
+output
+logs
+generated-assets
+handout
+
+!output/slides/theme
+!output/slides/plugin
+!output/slides/reveal.js
+!output/slides/reveal.css
+!output/slides/reset.css

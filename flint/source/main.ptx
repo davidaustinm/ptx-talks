@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********************************************************************
+Copyright 2019 Robert A. Beezer
+This file is part of PreTeXt.
+PreTeXt is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+PreTeXt is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <docinfo>
+        <macros>
+        \newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+        </macros>
+    </docinfo>
+
+    <slideshow>
+        <!--
+        <title>Creating accessible documents in PreTeXt</title>
+            <subtitle>A Slideshow</subtitle>
+        -->
+        <!--
+        <frontmatter>
+            <titlepage>
+                <author>
+                    <personname>David Austin</personname>
+                    <institution>Grand Valley State University</institution>
+                </author>
+                <event>UM Flint</event>
+                <date><today/></date>
+            </titlepage>
+        </frontmatter>
+        -->
+        <slide>
+          <title>Creating accessible documents in <pretext/></title>
+
+          <sidebyside widths="40% 30%" margins="5% 5% 20%"
+                      valigns="middle top">
+            <paragraphs>
+              <p><b>David Austin</b></p>
+              <p>Grand Valley State University</p>
+              <p>April 11, 2025</p>
+              <p>
+              </p>
+              <p>These slides are at
+              <url href="https://gvsu.edu/s/39C"
+                   visual="gvsu.edu/s/39C">
+                gvsu.edu/s/39C
+              </url>
+              </p>
+            </paragraphs>
+            
+            <image source="images/phone2-4.png" />
+          </sidebyside>
+              
+        </slide>
+
+        <slide>
+          <title>How do we accessibly share our work with others?
+          </title>
+
+          <p>
+            <ul pause="no">
+              <li><p>MS Word
+              <ul>
+                <li><p>Accessibility requires some expert knowledge
+                and additional steps</p></li>
+              </ul></p>
+              </li>
+              <li><p><latex/>
+              <ul>
+                <li><p>Accessibility is difficult, even with tagged
+                PDFs</p></li>
+                <li><p>Doesn't support modern features, such as
+                interactive content</p></li>
+              </ul>
+              </p></li>
+              <li><p>HTML is better
+              <ul>
+                <li><p>Accessibility requires well-structured
+                HTML</p></li> 
+                <li><p>Conversion from <latex/> is
+                problematic</p></li>
+              </ul> </p>
+              </li>
+            </ul>
+          </p>
+        </slide>
+                
+
+        <slide>
+          <title>What is PreTeXt?</title>
+
+          <p>
+            <ul pause="yes">
+              <li>
+                <p>An authoring system for scholarly documents:
+                books, articles, teaching
+                materials, slideshows, ...</p>
+              </li>
+              <li>
+                <p>A markup language for describing the
+                <em>structure</em> of a 
+                scholarly document</p>
+              </li>
+              <li>
+                <p>
+                  Open source and freely available
+                </p>
+              </li>
+              <li>
+                <p>Originally known as <c>mathbook.xml</c> but is
+                now used in many disciplines:
+                math, computer science,
+                physics, engineering, music theory, economics,
+                college writing, children's books, and more
+                </p>
+              </li>
+              <li>
+                <p>A vibrant community of users, developers,
+                researchers, and instructors</p>
+              </li>
+            </ul>
+          </p>
+        </slide>
+
+        <slide>
+          <title><pretext/> philosophy</title>
+
+          <p><q>Write once, read anywhere</q></p>
+          <p>
+            <ul pause="yes">
+              <li>
+                <p>From a single source, a document can be rendered
+                in
+                <ul>
+                  <li><p>HTML, fully accessible with a screenreader and is
+              responsive</p></li>
+                  <li><p>PDF</p></li>
+                  <li><p>EPUB</p></li>
+                  <li><p>Embossed braille and more</p></li>
+                </ul>
+                </p>
+              </li>
+
+              <li><p>An author focuses on the content and structure of
+              the document rather than presentation</p>
+              </li>
+
+              <li><p>Future proof</p></li>
+            </ul>
+          </p>
+        </slide>
+
+        <slide>
+          <title>Interactivity</title>
+
+          <p>
+            <ul pause="yes">
+              <li><p>Code fragments</p>
+              <sage>
+                <input>
+def collatz(n):            
+    if n % 2 == 0: return n / 2
+    return 3*n+1
+collatz(5)    
+                </input>
+              </sage>
+              </li>
+
+              <li><p>Desmos and Geogebra applets</p>
+              </li>
+
+              <li><p>Interactive questions:  WeBWorK, MyOpenMath, ...,
+              natively authored in <pretext/>
+              </p></li>
+
+              <li><p>Student work in <pretext/> books hosted on
+              <url href="https://landing.runestone.academy/"
+                   visual="runestone.academy">
+              Runestone Academy
+              </url> can be auto-graded and scores recorded.
+              </p></li>
+            </ul>
+          </p>
+        </slide>
+
+        <slide>
+          <title>Interactivity</title>
+
+          <p>
+            <ul pause="no">
+              <li>
+                <p>Embedded videos 
+                <video play-at="embed" width="70%"
+                       youtube="XYj2IWgZm-k"/>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </slide>
+
+        <slide>
+          <title>Writing <pretext/> source</title>
+
+          <p><pretext/> source is written in XML.  All content is
+          contained in nested tags, with attributes, that describe the
+          document's
+          structure and how elements relate to one another.
+          </p>
+
+          <program line-numbers="no">
+            <code><xi:include href="fragment.ptx"
+            parse="text"/>
+            </code>
+          </program>
+        </slide>
+
+        <slide>
+          <title>Writing <pretext/> source</title>
+
+          <theorem xml:id="theorem-pythagoras">
+            <title>Pythagorean theorem</title>
+            <statement>
+              <p>In a right triangle <m>\triangle ABC</m>, the lengths of the sides satisfy
+              <me>
+                a^2 + b^2 = c^2
+                </me>.
+              </p>
+            </statement>
+            <proof>
+              <p>
+                See Euclid
+              </p>
+            </proof>
+          </theorem>
+        </slide>
+        
+        <slide>
+          <title>Project workflow</title>
+
+          <p>
+            <ul pause="yes">
+              <li>
+                <p>Initialize a project: <c>pretext new [project]</c> where
+                project = book, article, course, slideshow, ...</p>
+                <p>This will create several files and directories</p>
+              </li>
+              <li>
+                <p>Write, edit, build: <c>pretext build [target]</c>
+                where target = web, print, ...</p>
+              </li>
+              <li>
+                <p>View with <c>pretext view [target]</c></p>
+              </li>
+              <li>
+                <p>Publish online: <c>pretext deploy</c></p>
+              </li>
+            </ul>
+          </p>
+        </slide>
+
+        <slide>
+          <title>Anatomy of a <pretext/> project</title>
+
+          <p>
+            <ul pause="yes">
+              <li><p>Source files in <c>source</c> folder</p></li>
+
+              <li><p>The project file</p>
+
+              <program line-numbers="no">
+                <code><xi:include href="doc-project.ptx"
+                parse="text"/>
+                </code>
+              </program>
+              
+              <p>Place to declare targets and provide some details about
+              building them.</p>
+              </li>
+
+            </ul>
+          </p>
+              
+        </slide>
+
+        <slide>
+          <title>Anatomy of a <pretext/> project</title>
+
+          <p>
+            <ul pause="no">
+              <li>
+                <p>One or more publication files in <c>publication</c>
+                folder provide some control over appearance</p>
+
+                <program line-numbers="no">
+                  <code><xi:include href="pub-display.ptx"
+                  parse="text"/>
+                  </code>
+                </program>
+                
+              </li>
+            </ul>
+          </p>
+        </slide>
+                
+
+        <!--
+           interactivity: 
+Sage cells, active code, webwork, my open math, reading questions
+embedded video, checkpoint assignments
+
+            many people report that the document they created would
+            have been different had they started in pretext
+           
+publiser v author
+
+pros:
+
+
+cons:
+something new to learn
+
+include some markup with math
+
+
+12 years old:  recent work to make easier to use and to expand the
+types of documents you can create
+
+
+workflow:  new, build, view, deploy
+
+
+Runestone
+
+Use an XML aware editor
+
+looks good on a phone
+
+Future: course template, WYSIWYG
+
+Links: mathtech.org:  oscar's talk, Chrissy's notes
+Jen's syllabus
+
+
+        -->
+
+        <slide>
+          <title>Mathematical diagrams</title>
+
+          <p>
+            <ul pause="no">
+              <li>
+                <p>
+                <url href="https://prefigure.org/"
+                     visual="prefigure.org">
+                  <prefigure/>
+                </url>
+                is an authoring system (markup language) for
+                accessible mathematical 
+                diagrams.  <prefigure/>
+                is to figures what <pretext/> is to text.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Standalone software yet fully integrated into
+                  <pretext/>. 
+                </p>
+              </li>
+            </ul>
+          </p>
+          
+          <figure>
+            <image width="50%">
+              <prefigure xmlns="https://prefigure.org"
+                         label="prefigure-tangent">
+                <xi:include href="prefigure/tangent.xml"/>
+              </prefigure>
+            </image>
+            <caption>A <prefigure/> diagram</caption>
+          </figure>
+        </slide>
+
+<!--        <slide>
+          <title><prefigure/></title>
+
+          <program line-numbers="yes">
+            <code><xi:include href="prefigure/tangent-display.xml"
+            parse="text"/>
+            </code>
+          </program>
+        </slide>
+-->
+        <slide>
+          <title>Stages of <pretext/> authoring </title>
+
+          <p> Remember:  concentrate on what you want to say, not how you
+          want it to look
+          </p>
+          <p>
+            <ol pause="yes">
+              <li>
+                <p>
+                  <q>I'm frustruated: This is confusing and new</q>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <q>This is starting to make sense, but I want this
+                  word to be in bold, not italics</q>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <q>Actually, it's kind of liberating to not worry
+                  about spacing and formatting</q>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <q>This final product is a lot better than it would
+                    have been otherwise.</q>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </slide>
+
+        <slide>
+          <title>Accessibility</title>
+
+          <p>
+            <ul pause="yes">
+              <li>
+                <p>
+                  Student Accessibilty Office contacted the GVSU math
+                  department in the summer of 2023. A
+                  visually-impaired student 
+                  would be enrolled in our precalculus class in Fall
+                  2023.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The textbook publisher wanted $40,000 for a braille
+                  edition of the textbook.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Rob Beezer, the founder of <pretext/>, converted Matt
+                  Boelkins' open precalculus textbook
+                  <url
+                      href="https://activecalculus.org/prelude/book-1.html"
+                      visual="Active Prelude"> Active Prelude to Calculus
+                  </url> into braille.
+                </p>
+              </li>
+              <li>
+                <p>
+                  I recreated all the diagrams in <prefigure/>
+                  and embossed tactile versions.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Total cost:  $0
+                </p>
+              </li>
+            </ul>
+          </p>
+        </slide>
+
+        <slide>
+          <title>How to use <pretext/></title>
+
+          <p>You will want an XML-aware text editor.
+            <ul pause="yes">
+              <li>
+                <p>Local installation of <pretext/></p>
+                <ul>
+                  <li><p><c>pip install pretext</c></p></li>
+                  <li><p>Issue commands from a terminal</p></li>
+                </ul>
+              </li>
+              <li><p>With a local version of Python, install the
+              <c>PreTeXt-tools</c> extension within VSCode.</p>
+              </li>
+              <li>
+                <p>
+                  <url
+                      href="https://github.com/PreTeXtBook/pretext-codespace"
+                    visual="pretext-codespace">
+                    GitHub codespace
+                  </url>, a cloud environment used by many newcomers
+                </p>
+              </li>
+
+              <li>
+                <p>A WYSIWYG editor will be here soon as well as
+                better collaborative tools in the spirit of Overleaf.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </slide>
+
+        <slide>
+          <title>Resources (these slides are at
+            gvsu.edu/s/39C)</title>
+
+          <p>
+            <ul pause="no">
+              <li>
+                <p>
+                  <url href="https://pretextbook.org/"
+                       visual="pretextbook.org">
+                    PreTeXt home page
+                  </url>, with documentation
+                </p>
+              </li>
+              <li>
+                <p>
+                  <url href="https://pretextbook.org/examples/sample-article/html/derivatives.html">
+                    <pretext/> Sample article
+                  </url>, including demonstrations of most features
+                  with sample <pretext/> source.
+                </p>
+              </li>
+
+              <li>
+                <p><url href="https://mathtech.org"
+                        visual="mathtech.org">
+                  MathTech.org</url>, including
+                  Oscar Levin's post about 
+                  <url href="https://mathtech.org/2025/04/10/accessibility.html">
+                    accessible course materials in <pretext/> 
+                  </url>
+                  (e.g., syllabus, worksheets) 
+                </p>
+              </li>
+              <li>
+                <p>
+                  <url href="https://learn.linfield.edu/bbcswebdav/users/jfirkins/INQS125/web/INQS_syllabus.html">
+                    Jennifer Nordstrom's syllabus
+                  </url>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Google groups (from low volume to high):
+                  pretext-announce, pretext-support, 
+                  pretext-dev
+                </p>
+              </li>
+              <li>
+                <p>
+                  Tuesday, Thursday, Friday
+                  <url href="https://prose.runestone.academy/#upcoming-events">
+                    virtual dropins
+                  </url>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </slide>
+
+<!--        <slide>
+          <title> Tutorial </title>
+
+          <p>
+            <ul>
+              <li>
+                <p>Go to 
+                <url
+                    href="https://github.com/PreTeXtBook/pretext-codespace"
+                    visual="pretext-codespace">
+                  PreTeXt GitHub codespace
+                  </url>, which is
+                  <url href="https://gvsu.edu/s/39s"
+                       visual="gvsu.edu/s/39s">
+                    gvsu.edu/s/39s
+                  </url>
+                </p>
+              </li>
+
+              <li>
+                <p>To start a codespace:
+                <ul>
+                  <li>
+                    <p>Select the button <c>Use the template</c> and
+                    <c>Create a new repository</c>.</p>
+                  </li>
+                  <li>
+                    <p>Give the repository a name, such as
+                    <c>ptx-demo</c> and select <c>Create
+                    repository</c>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>You will taken to the home page of the
+                    repository.  Then 
+                    select <c>Code</c> and <c>Create codespace on
+                    main.</c>  
+                    </p>
+                  </li>
+                  <li>
+                    <p>This will take some time,
+                    but you will then see a VSCode window.
+                    </p>
+                  </li>
+                </ul>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </slide>
+-->
+</slideshow>
+</pretext>
