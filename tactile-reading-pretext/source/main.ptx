@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********************************************************************
+Copyright 2019 Robert A. Beezer
+This file is part of PreTeXt.
+PreTeXt is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+PreTeXt is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+      \newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+    </macros>
+  </docinfo>
+  
+  <slideshow>
+    <slide>
+      <title><pretext/>, <prefigure/>, and the production of braille
+      math books</title>
+      
+      <p>David Austin, Grand Valley State University</p>
+      <p>Alexei Kolesnikov, Towson University</p>
+      <p>Tactile Reading and Graphics Conference</p>
+      <p>June 2, 2025</p>
+      
+    </slide>
+    
+    <slide>
+      <title>What is <pretext/>?
+      </title>
+      
+      <p>
+        <ul pause="no">
+          <li>
+            <p>An authoring system for scholarly documents:
+            books, articles, teaching
+            materials, slideshows, <ellipsis/></p>
+          </li>
+
+          <li>
+            <p>Open source and freely available</p>
+          </li>
+          
+          <li>
+            <p>Originates in the mathematics community but
+            now used in many disciplines, such as
+            computer science,
+            physics, engineering, music theory, economics,
+            college writing, and children's books
+            </p>
+          </li>
+          
+          <li>
+            <p>A vibrant community of authors, developers, 
+            researchers, and instructors</p>
+          </li>
+        </ul>
+      </p>
+    </slide>
+    
+    <slide>
+      <title><pretext/> philosophy</title>
+      
+      <p><q>Write once, read anywhere</q></p>
+      <p>
+        <ul pause="no">
+          <li>
+            <p>From a single source, a document can be rendered
+            in
+            <ul>
+              <li><p>HTML, fully accessible with a screenreader,</p></li>
+              <li><p>PDF,</p></li>
+              <li><p>BRF.</p></li>
+            </ul>
+            </p>
+          </li>
+          
+          <li><p>An author focuses on the content and structure of
+          the document rather than presentation.</p>
+          </li>
+
+          <li><p>No accessibility expertise is required of the
+          author.</p></li> 
+          
+        </ul>
+      </p>
+    </slide>
+    
+    <slide>
+      <title>Writing <pretext/> source</title>
+      
+      <p><pretext/> source is written in XML.  All content is
+      contained in nested tags, with attributes, that describe the
+      document's structure.
+      </p>
+      
+      <program line-numbers="no">
+        <code><xi:include href="fragment.ptx"
+        parse="text"/>
+        </code>
+      </program>
+    </slide>
+    
+    <slide>
+      <title>Appearance in a slideshow</title>
+      
+      <theorem xml:id="theorem-pythagoras">
+        <title>Pythagorean theorem</title>
+        <statement>
+          <p>In a right triangle <m>\triangle ABC</m>, the lengths of
+          the sides satisfy
+          <me>
+            a^2 + b^2 = c^2
+            </me>.
+          </p>
+        </statement>
+        <proof>
+          <p>
+            See Euclid
+          </p>
+        </proof>
+      </theorem>
+    </slide>
+    
+    <slide>
+      <title>Mathematical diagrams</title>
+      
+      <p>
+        <ul pause="no">
+          <li>
+            <p>
+              <url href="https://prefigure.org/"
+                   visual="prefigure.org">
+                <prefigure/>,
+              </url>
+              an authoring system for accessible
+              mathematical diagrams,
+              is to figures what <pretext/> is to text. (Workshop
+              tomorrow at noon!)
+            </p>
+          </li>
+          <li>
+            <p>
+              Standalone software yet fully integrated into
+              <pretext/>. 
+            </p>
+          </li>
+          <li><p>From a single source, an author can create annotated
+          SVGs, PDFs, and tactile diagrams.</p></li>
+        </ul>
+      </p>
+      
+      <figure>
+        <image width="80%">
+          <shortdescription>A prefigure diagram that shows the graph of a
+          function and its tangent line at a point.</shortdescription>
+          <prefigure xmlns="https://prefigure.org"
+                     label="prefigure-tangent">
+            <xi:include href="prefigure/tangent.xml"/>
+          </prefigure>
+        </image>
+        <caption>An annotated <prefigure/> diagram</caption>
+      </figure>
+    </slide>
+
+    <slide>
+      <title>Braille conversions</title>
+
+      <p>
+        <ul pause="no">
+          <li>
+            <p>Conversion of <pretext/> source into BRF is automated.</p>
+          </li>
+          <li>
+            <p>Mathematics is processed by MathJax so that math is
+            rendered in Nemeth braille and navigable with a
+            screenreader.
+            </p>
+          </li>
+          <li><p>Conversions to date:
+          <ul>
+            <li><p>Tom Judson,
+            <url href="https://judsonbooks.org/aata/">Abstract Algebra
+            and Applications.</url></p></li>
+            <li><p>Matt Boelkins,
+            <url
+                href="https://activecalculus.org/prelude/book-1.html">
+              Active Prelude to Calculus.
+            </url></p></li>
+            <li><p>David Austin,
+            <url
+                href="https://understandinglinearalgebra.org/home.html">
+              Understanding Linear Algebra.
+            </url></p></li>
+          </ul>
+        </p>
+          </li>
+        </ul>
+      </p>
+    </slide>
+    
+    <slide>
+      <title>Resources</title>
+      
+      <p>
+        <ul pause="no">
+          <li>
+            <p>
+              <url
+                  href="https://github.com/PreTeXtBook/pretext-codespace"
+                  visual="pretext-codespace">
+                GitHub codespace
+                </url>, a cloud environment used by many newcomers to
+                <pretext/>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <url href="https://pretextbook.org/"
+                   visual="pretextbook.org">
+                PreTeXt home page
+                </url>, with documentation and samples.
+            </p>
+          </li>
+          <li>
+            <p>
+              <url href="https://pretextbook.org/examples/sample-article/html/derivatives.html">
+                <pretext/> Sample article
+                </url>, including demonstrations of most features
+                with sample <pretext/> source.
+            </p>
+          </li>
+          
+          <li>
+            <p><url href="https://mathtech.org"
+                    visual="mathtech.org">
+              MathTech.org</url>, a blog about uses of <pretext/> and
+              its accessibility features
+              
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Google groups (from low volume to high):
+              pretext-announce, pretext-support, 
+              pretext-dev
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Monday, Tuesday, Thursday
+              <url href="https://prose.runestone.academy/#upcoming-events">
+                virtual dropins
+              </url>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </slide>
+    
+  </slideshow>
+</pretext>

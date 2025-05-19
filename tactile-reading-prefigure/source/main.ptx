@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********************************************************************
+Copyright 2019 Robert A. Beezer
+This file is part of PreTeXt.
+PreTeXt is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+PreTeXt is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+      \newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+    </macros>
+  </docinfo>
+  
+  <slideshow>
+    <slide>
+      <title><prefigure/> for creating tactile mathematical diagrams</title>
+      
+      <p>David Austin, Grand Valley State University</p>
+      <p>Alexei Kolesnikov, Towson University</p>
+      <p>Tactile Reading and Graphics Conference</p>
+      <p>June 3, 2025</p>
+      
+    </slide>
+
+    <slide>
+      <title>What is <prefigure/>?</title>
+      
+      <p>
+        <ul pause="no">
+          <li>
+            <p><prefigure/> is an authoring system for creating
+            accessible mathematical diagrams.
+            <em><prefigure/> is to figures what <pretext/> is to
+            text.</em>
+            </p>
+          </li>
+          <li><p>Open source and freely avaiable.</p></li>
+          <li>
+            <p>Write once, read everywhere.
+            From the same source, <prefigure/> creates
+            <ul>
+              <li><p>SVG for HTML,</p></li>
+              <li><p>PDF for print,</p></li>
+              <li><p>tactile graphics for embossing,</p></li>
+              <li><p>more <ellipsis/>.</p></li>
+            </ul>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </slide>
+    
+    <slide>
+      <title>Tactile diagrams</title>
+      
+      <p>An embossed tactile diagram
+      <image width="60%" source="images/tactile.jpg">
+        <shortdescription>An embossed tactile diagram showing
+        the graph of a function and a secant line drawn
+        between two points on the graph.</shortdescription>
+      </image>
+      </p>
+    </slide>
+
+    <slide>
+      <title>Annotated diagrams</title>
+
+      <figure>
+        <image width="80%">
+          <shortdescription>An annotated diagram created in
+          <prefigure/> depicting the graph of a function and a tangent
+          line drawn at a point.</shortdescription>
+          <prefigure xmlns="https://prefigure.org"
+                     label="prefigure-tangent.xml">
+            <xi:include href="prefigure/tangent.xml"/>
+          </prefigure>
+        </image>
+        <caption>An annotated diagram written in
+        <prefigure/>.</caption> 
+      </figure>
+    </slide>
+    
+    
+    <slide>
+      <title>Anatomy of a <prefigure/> diagram</title>
+      
+      <listing>
+        <program>
+          <code><xi:include href="prefigure/tangent-show.xml"
+          parse="text"/>
+          </code>
+        </program>
+        <caption>The <prefigure/> source for the previous
+        diagram (without annotations).</caption> 
+      </listing>
+    </slide>
+        
+
+    <slide>
+      <title>What kind of diagrams can we create?</title>
+      
+      <p>
+        <ul pause="no">
+          <li>
+            <url href="https://prefigure.org/docs/sec-gallery.html#sec-gallery-2">
+              <prefigure/> gallery
+            </url>
+          </li>
+
+          <li>
+            <p>Differential equations</p>
+          </li>
+          <li>
+            <p>Networks</p>
+          </li>
+          <li>
+            <p>Working with data</p>
+          </li>
+        </ul>
+      </p>
+    </slide>
+    
+    <slide>
+      <title>Getting started with <prefigure/></title>
+      <p>
+        <ul pause="no">
+          <li>
+            <p><prefigure/> playground, thanks to Jason Siefken,
+            <url href="https://gvsu.edu/s/35f">gvsu.edu/s/35f</url>.
+            </p>
+          </li>
+          <li>
+            <p><prefigure/> codespace,
+            <url href="https://gvsu.edu/s/35e">
+              gvsu.edu/s/35e
+            </url>
+            </p>
+          </li>
+          
+          <li>
+            <p><url href="https://github.com/PreTeXtBook/pretext-codespace">
+              <pretext/> codespace
+              </url>
+            </p>
+          </li>
+          <li>
+            <p>Install locally from instructions at
+            <url href="https://prefigure.org">
+              prefigure.org
+            </url>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </slide>
+    
+    <slide>
+      <title>Your turn</title>
+      
+      <p><prefigure/> documentation:
+      <url href="https://prefigure.org"> prefigure.org </url>
+      </p>
+      <p>
+        <ul>
+          <li>
+            <p>In the Playground,
+            (<url href="https://gvsu.edu/s/35f">gvsu.edu/s/35f</url>)
+            modify the original diagram:
+            <ul>
+              <li>
+                <p>Change the apsect ratio with
+                <c>dimensions="(300,200)"</c></p>
+              </li>
+              <li>
+                <p>Change the bounding box with
+                <c>bbox="(-1,-2,4,5)"</c>
+                </p>
+              </li>
+              <li>
+                <p>Change the function <c>f</c> or the point
+                <c>a</c> where the tangent line is drawn.
+                </p>
+              </li>
+              <li>
+                <p>Add another function and include
+                <c>stroke="green"</c>.</p> 
+              </li>
+              <li>
+                <p>Add another point with a label.</p>
+              </li>
+            </ul>
+            </p>
+          </li>
+          <li><p>Recreate one of the tactile samples.</p></li>
+        </ul>
+      </p>
+    </slide>
+
+  </slideshow>
+</pretext>

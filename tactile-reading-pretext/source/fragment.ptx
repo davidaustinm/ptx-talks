@@ -1,0 +1,15 @@
+        <theorem xml:id="theorem-pythagoras">
+          <title>Pythagorean theorem</title>
+          <statement>
+            <p>In a right triangle <m>\triangle ABC</m>, the lengths of the sides satisfy
+            <me>
+              a^2 + b^2 = c^2
+            </me>.
+            </p>
+          </statement>
+          <proof>
+            <p>
+              See Euclid
+            </p>
+          </proof>
+        </theorem>
