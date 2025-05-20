@@ -181,9 +181,14 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             <p>Conversion of <pretext/> source into BRF is automated.</p>
           </li>
           <li>
-            <p>Mathematics is processed by MathJax so that math is
-            rendered in Nemeth braille and navigable with a
-            screenreader.
+            <p>Literary text is processed with <c>liblouis</c> and 
+            mathematics elements are translated into Nemeth Braille by the 
+            Speech Rule Engine of MathJax.
+            </p>
+          </li>
+          <li>
+            <p>Translated literary text and mathematics are then re-assembled and 
+            formatted (paginated for embossing or as files for Braille displays).
             </p>
           </li>
           <li><p>Conversions to date:
