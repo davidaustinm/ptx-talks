@@ -50,7 +50,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             <p>Write once, read everywhere.
             From the same source, <prefigure/> creates
             <ul>
-              <li><p>SVG for HTML,</p></li>
+              <li><p>annotated SVG for HTML,</p></li>
               <li><p>PDF for print,</p></li>
               <li><p>tactile graphics for embossing,</p></li>
               <li><p>more <ellipsis/>.</p></li>
@@ -60,7 +60,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         </ul>
       </p>
     </slide>
-    
+
+    <!--
     <slide>
       <title>Tactile diagrams</title>
       
@@ -71,7 +72,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         between two points on the graph.</shortdescription>
       </image>
       </p>
-    </slide>
+      </slide>
+    -->
 
     <slide>
       <title>Annotated diagrams</title>
@@ -86,12 +88,37 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             <xi:include href="prefigure/tangent.xml"/>
           </prefigure>
         </image>
-        <caption>An annotated diagram written in
+        <caption>An annotated diagram created with 
         <prefigure/>.</caption> 
       </figure>
     </slide>
     
-    
+    <slide>
+      <title>Tactile graphics</title>
+
+      <sidebyside widths="40% 40%">
+        <image source="images/tangent.png">
+          <shortdescription>A tactile diagram showing
+          the graph of a function and a tangent line drawn
+          at a point.</shortdescription>
+        </image>
+        <p>
+        <ul>
+          <li>
+            <p>Foreground components have a clear outline.</p>
+          </li>
+          <li>
+            <p>MathJax produces mathematics in Nemeth Braille.</p>
+          </li>
+          <li>
+            <p>Labels are rendered in the Braille29 font to facilitate
+            embossing. </p>
+          </li>
+        </ul>
+        </p>
+      </sidebyside>
+    </slide>
+
     <slide>
       <title>Anatomy of a <prefigure/> diagram</title>
       
@@ -102,7 +129,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
           </code>
         </program>
         <caption>The <prefigure/> source for the previous
-        diagram (without annotations).</caption> 
+        diagrams (without annotations).</caption> 
       </listing>
     </slide>
         
@@ -203,6 +230,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             </p>
           </li>
           <li><p>Recreate one of the tactile samples.</p></li>
+          <li><p>Explore samples in the <c>Examples</c> link.</p></li>
         </ul>
       </p>
     </slide>

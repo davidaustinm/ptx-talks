@@ -173,6 +173,29 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </slide>
 
     <slide>
+      <title>Tactile graphics</title>
+
+      <sidebyside widths="40% 40%">
+        <image source="images/tangent.png"/>
+
+        <p>
+        <ul>
+          <li>
+            <p>Foreground components have a clear outline.</p>
+          </li>
+          <li>
+            <p>MathJax produces mathematics in Nemeth Braille.</p>
+          </li>
+          <li>
+            <p>Labels are rendered in the Braille29 font to facilitate
+            embossing. </p>
+          </li>
+        </ul>
+        </p>
+      </sidebyside>
+    </slide>
+
+    <slide>
       <title>Braille conversions</title>
 
       <p>
