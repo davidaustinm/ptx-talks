@@ -78,8 +78,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             in
             <ul>
               <li><p>HTML, fully accessible with a screenreader,</p></li>
-              <li><p>PDF,</p></li>
-              <li><p>BRF.</p></li>
+              <li><p>PDF (with possible intermediate LaTeX source),</p></li>
+              <li><p>EPUB (with math rendered as images, or MathML, or speech),</p></li>
+              <li><p>BRF (paginated or for refreshable displays).</p></li>
             </ul>
             </p>
           </li>
@@ -116,8 +117,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
       <theorem xml:id="theorem-pythagoras">
         <title>Pythagorean theorem</title>
         <statement>
-          <p>In a right triangle <m>\triangle ABC</m>, the lengths of
-          the sides satisfy
+          <p>Let <m>\triangle ABC</m> be a right triangle. Suppose that <m>c</m> is the length of
+          the side opposite the right angle and <m>a</m>, <m>b</m> are the lengths of two other sides. Then
           <me>
             a^2 + b^2 = c^2
             </me>.
@@ -181,18 +182,29 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             <p>Conversion of <pretext/> source into BRF is automated.</p>
           </li>
           <li>
-            <p>Literary text is processed with <c>liblouis</c> and 
-            mathematics elements are translated into Nemeth Braille by the 
-            Speech Rule Engine of MathJax.
+            <p>Mathematics is processed by MathJax so that math is
+            rendered in Nemeth braille and navigable with a
+            screenreader.
             </p>
           </li>
           <li>
-            <p>Translated literary text and mathematics are then re-assembled and 
-            formatted (paginated for embossing or as files for Braille displays).
+            <p>
+        <program line-numbers="no">
+        <code><xi:include href="fragment_braille.ptx"
+        parse="text"/>
+        </code>
+        </program>
             </p>
           </li>
-          <li><p>Conversions to date:
-          <ul>
+        </ul>
+      </p>
+    </slide>
+    
+<slide>
+      <title>Braille conversions to date</title>
+
+      <p>
+        <ul pause="no">
             <li><p>Tom Judson,
             <url href="https://judsonbooks.org/aata/">Abstract Algebra
             and Applications.</url></p></li>
@@ -208,9 +220,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             </url></p></li>
           </ul>
         </p>
-          </li>
-        </ul>
-      </p>
+
+	<p> Use case: screen reader, refreshable Braille display, tactile graphics
+
     </slide>
     
     <slide>
