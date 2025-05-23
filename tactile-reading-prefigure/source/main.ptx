@@ -134,6 +134,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </slide>
         
 
+    <!--
     <slide>
       <title>What kind of diagrams can we create?</title>
       
@@ -156,7 +157,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
           </li>
         </ul>
       </p>
-    </slide>
+      </slide>
+    -->
     
     <slide>
       <title>Getting started with <prefigure/></title>
