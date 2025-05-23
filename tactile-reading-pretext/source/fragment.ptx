@@ -1,18 +1,17 @@
-       <theorem xml:id="theorem-pythagoras">
-        <title>Pythagorean theorem</title>
-        <statement>
-          <p>Let <m>\triangle ABC</m> be a right triangle. Suppose that 
-	<m>c</m> is the length of the side opposite the right 
-	angle and <m>a</m>, <m>b</m> are the lengths of two other 
-	sides. Then
-          <me>
-            a^2 + b^2 = c^2
-            </me>.
-          </p>
-        </statement>
-        <proof>
-          <p>
-            See Euclid.
-          </p>
-        </proof>
-      </theorem>
+<theorem xml:id="theorem-pythagoras">
+  <title>Pythagorean theorem</title>
+  <statement>
+    <p>
+      Let <m>\triangle ABC</m> be a right triangle. Suppose that <m>c</m> is the length of the side
+      opposite the right angle and <m>a</m>, <m>b</m> are the lengths of two other sides. Then
+      <me>
+        a^2 + b^2 = c^2
+      </me>.
+    </p>
+  </statement>
+  <proof>
+    <p>
+      See Euclid.
+    </p>
+  </proof>
+</theorem>
