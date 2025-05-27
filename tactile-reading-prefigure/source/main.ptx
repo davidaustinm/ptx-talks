@@ -45,7 +45,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             text.</em>
             </p>
           </li>
-          <li><p>Open source and freely avaiable.</p></li>
+          <li><p>Open source and freely available.</p></li>
           <li>
             <p>Write once, read everywhere.
             From the same source, <prefigure/> creates
@@ -208,7 +208,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             modify the original diagram:
             <ul>
               <li>
-                <p>Change the apsect ratio with
+                <p>Change the aspect ratio with
                 <c>dimensions="(300,200)"</c></p>
               </li>
               <li>
